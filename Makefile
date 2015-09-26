@@ -1,5 +1,5 @@
 PKG_NAME := os-client-config
-URL := http://tarballs.openstack.org/os-client-config/os-client-config-1.6.3.tar.gz
+URL := http://tarballs.openstack.org/os-client-config/os-client-config-1.7.5.tar.gz
 ARCHIVES :=
 
 include ../common/Makefile.common
