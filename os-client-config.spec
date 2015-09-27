@@ -4,7 +4,7 @@
 #
 Name     : os-client-config
 Version  : 1.7.5
-Release  : 7
+Release  : 8
 URL      : http://tarballs.openstack.org/os-client-config/os-client-config-1.7.5.tar.gz
 Source0  : http://tarballs.openstack.org/os-client-config/os-client-config-1.7.5.tar.gz
 Summary  : OpenStack Client Configuation Library
@@ -27,6 +27,7 @@ BuildRequires : flake8-python
 BuildRequires : funcsigs-python
 BuildRequires : hacking
 BuildRequires : iso8601-python
+BuildRequires : keystoneauth1-python
 BuildRequires : linecache2-python
 BuildRequires : markupsafe-python
 BuildRequires : mccabe-python
@@ -76,6 +77,9 @@ os-client-config
 %package python
 Summary: python components for the os-client-config package.
 Group: Default
+Requires: PyYAML-python
+Requires: appdirs-python
+Requires: keystoneauth1-python
 
 %description python
 python components for the os-client-config package.

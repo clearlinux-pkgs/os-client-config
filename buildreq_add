@@ -52,3 +52,4 @@ tox
 traceback2-python
 unittest2-python
 virtualenv
+keystoneauth1-python
