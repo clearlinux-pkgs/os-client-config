@@ -4,7 +4,7 @@
 #
 Name     : os-client-config
 Version  : 1.8.1
-Release  : 10
+Release  : 11
 URL      : http://tarballs.openstack.org/os-client-config/os-client-config-1.8.1.tar.gz
 Source0  : http://tarballs.openstack.org/os-client-config/os-client-config-1.8.1.tar.gz
 Summary  : OpenStack Client Configuation Library
