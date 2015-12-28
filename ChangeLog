@@ -1,11 +1,33 @@
 CHANGES
 =======
 
+1.13.0
+------
+
+* Fix glance endpoints with endpoint_override
+* Allow passing in explicit version for legacy_client
+* Pass endpoint override to constructors
+* Support backwards compat for _ args
+* Add backwards compat mapping for auth-token
+* Replace assertEqual(None, *) with assertIsNone in tests
+* Allow arbitrary client-specific options
+* Add ceilometer constructor to known constructors
+* Add support for generalized per-region settings
+* Fix a README typo - hepler is not actually a thing
+* Make client constructor optional
+* Updated README to clarify legacy client usage
+* Add simple helper function for client construction
+* Add method for registering argparse options
+* Update vexxhost to Identity v3
+* Make sure that cloud always has a name
+* Remove optional keystoneauth1 imports
+
 1.12.0
 ------
 
 * Add BHS1 to OVH
 * Handle cinder v2
+* Add support for secure.yaml file for auth info
 
 1.11.1
 ------
