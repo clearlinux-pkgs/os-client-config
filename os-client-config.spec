@@ -4,7 +4,7 @@
 #
 Name     : os-client-config
 Version  : 1.13.0
-Release  : 15
+Release  : 16
 URL      : http://tarballs.openstack.org/os-client-config/os-client-config-1.13.0.tar.gz
 Source0  : http://tarballs.openstack.org/os-client-config/os-client-config-1.13.0.tar.gz
 Summary  : OpenStack Client Configuation Library
@@ -71,6 +71,7 @@ BuildRequires : traceback2-python
 BuildRequires : unittest2-python
 BuildRequires : virtualenv
 Patch1: 0001-test-patch.patch
+Patch2: 0001-Fix-token_endpoint-usage.patch
 
 %description
 ================
@@ -98,6 +99,7 @@ python components for the os-client-config package.
 %prep
 %setup -q -n os-client-config-1.13.0
 %patch1 -p1
+%patch2 -p1
 
 %build
 python2 setup.py build -b py2
