@@ -1,6 +1,15 @@
 CHANGES
 =======
 
+1.13.1
+------
+
+* Munge region_name to '' if set to None
+* Fix some README typos
+* Fix token_endpoint usage
+* remove python 2.6 os-client-config classifier
+* If cloud doesn't list regions expand passed name
+
 1.13.0
 ------
 
