@@ -1,6 +1,26 @@
 CHANGES
 =======
 
+1.14.0
+------
+
+* Fix a precedence problem with auth arguments
+* Return empty dict instead of None for lack of file
+* Pass version arg by name not position
+* Use _get_client in make_client helper function
+* Add barbicanclient support
+* Remove openstack-common.conf
+* Add IBM Public Cloud
+* Replace assertEqual(None, *) with assertIsNone in tests
+* Update auth urls and identity API versions
+* Stop hardcoding compute in simple_client
+* Update volume API default version from v1 to v2
+* Debug log a deferred keystone exception, else we mask some useful diag
+* Fix README.rst, add a check for it to fit PyPI rules
+* Use reno for release notes
+* add URLs for release announcement tools
+* Allow filtering clouds on command line
+
 1.13.1
 ------
 
