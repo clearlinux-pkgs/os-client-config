@@ -1,6 +1,26 @@
 CHANGES
 =======
 
+1.16.0
+------
+
+* Update the README a bit
+* Allow session_client to take the same args as make_client
+
+1.15.0
+------
+
+* Add release notes
+* Send swiftclient username/password and token
+* Remove HP and RunAbove from vendor profiles
+* Added SSL support for VEXXHOST
+* Add support for zetta.io
+* Stop ignoring v2password plugin
+* Go ahead and remove final excludes
+* Don't set project_domain if not project scoped
+* Clean up removed hacking rule from [flake8] ignore lists
+* set up release notes build
+
 1.14.0
 ------
 
