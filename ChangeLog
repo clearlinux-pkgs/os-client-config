@@ -1,11 +1,22 @@
 CHANGES
 =======
 
+1.17.0
+------
+
+* Pull the network settings from the actual dict
+* Clarify one-per-cloud network values
+* Flesh out netowrk config list
+* Change network info indication to a generic list
+* Update reno for stable/mitaka
+* Add osic vendor profile
+
 1.16.0
 ------
 
 * Update the README a bit
 * Allow session_client to take the same args as make_client
+* Fix formulation
 
 1.15.0
 ------
