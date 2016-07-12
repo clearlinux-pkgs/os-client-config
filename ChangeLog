@@ -1,6 +1,22 @@
 CHANGES
 =======
 
+1.18.0
+------
+
+* Reword the entries in the README a bit
+* Add shade constructor helper method
+* Rename session_client to make_rest_client
+* Add helper method for OpenStack SDK constructor
+* Add missing "cloud" argument to _validate_auth_ksc
+* Workaround bad required params in troveclient
+* Trivial: Remove 'MANIFEST.in'
+* Trivial: remove openstack/common from flake8 exclude list
+* drop python3.3 support in classifier
+* Fix formatting in readme file
+* Remove discover from test-requirements.txt
+* Add version string
+
 1.17.0
 ------
 
