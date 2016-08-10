@@ -1,6 +1,24 @@
 CHANGES
 =======
 
+1.19.1
+------
+
+* Add test for precedence rules
+* Pass the argparse data into to validate_auth
+* Revert "Fix precedence for pass-in options"
+
+1.19.0
+------
+
+* Add release notes for 1.19.0 release
+* Add the new DreamCompute cloud
+* Fix precedence for pass-in options
+* Update citycloud to list new regions
+* Add support for listing a cloud as shut down
+* Add support for deprecating cloud profiles
+* Refactor fix magic in get_one_cloud()
+
 1.18.0
 ------
 
