@@ -1,6 +1,47 @@
 CHANGES
 =======
 
+1.22.0
+------
+
+* Revert "Split auth plugin loading into its own method"
+* Add setter for session constructor
+* Enable release notes translation
+* cloud_config:get_session_endpoint: catch Keystone EndpointNotFound
+* Using assertIsNone() instead of assertEqual(None, ...)
+* Update homepage with developer documentation page
+* List py35 in the default tox env list
+* Fix AttributeError in `get_config`
+* modify the home-page info with the developer documentation
+* Don't create envvars cloud if cloud or region are set
+* Don't build releasenotes in normal docs build
+* Update reno for stable/newton
+* Add ability to configure Session constructor
+* Split auth plugin loading into its own method
+
+1.21.1
+------
+
+* Go ahead and handle YAML list in region_name
+
+1.21.0
+------
+
+* Add prompting for KSA options
+* Clean up vendor support list
+
+1.20.1
+------
+
+* Precedence final solution
+
+1.20.0
+------
+
+* Add support for configuring split-stack networks
+* Pop domain-id from the config if we infer values
+* Update Internap information
+
 1.19.1
 ------
 
