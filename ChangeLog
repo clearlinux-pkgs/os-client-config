@@ -1,6 +1,23 @@
 CHANGES
 =======
 
+1.24.0
+------
+
+* Revert "Remove validate_auth_ksc"
+
+1.23.0
+------
+
+* Remove validate_auth_ksc
+* Add fuga.io to vendors
+* Support token_endpoint as an auth_type
+* Add support for volumev3 service type
+* Normalize cloud config before osc-lib call
+* Fix a bunch of tests
+* Clarify how to set SSL settings
+* Update ECS image_api_version to 1
+
 1.22.0
 ------
 
