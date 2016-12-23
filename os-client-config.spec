@@ -4,7 +4,7 @@
 #
 Name     : os-client-config
 Version  : 1.24.0
-Release  : 30
+Release  : 31
 URL      : http://tarballs.openstack.org/os-client-config/os-client-config-1.24.0.tar.gz
 Source0  : http://tarballs.openstack.org/os-client-config/os-client-config-1.24.0.tar.gz
 Summary  : OpenStack Client Configuation Library
