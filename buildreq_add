@@ -57,3 +57,5 @@ requestsexceptions-python
 jsonschema-python
 funcsigs-python
 python-glanceclient
+functools32
+requestsexceptions
