@@ -1,6 +1,24 @@
 CHANGES
 =======
 
+1.26.0
+------
+
+* Revert "Fix interface_key for identity clients"
+* Add support for Murano
+
+1.25.0
+------
+
+* Add OpenTelekomCloud to the vendors
+* Remove 3.4 from tox envlist
+* Use upper-constraints for tox envs
+* Update swift constructor to be Session aware
+* Magnum's service_type is container_infra
+* Add docutils contraint on 0.13.1 to fix building
+* Fix interface_key for identity clients
+* Show team and repo badges on README
+
 1.24.0
 ------
 
