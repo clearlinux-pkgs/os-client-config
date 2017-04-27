@@ -1,10 +1,34 @@
 CHANGES
 =======
 
+1.27.0
+------
+
+* Make \_fix\_argv() somewhat compatible with Argparse action='append'
+* Add ability to pass in user\_agent
+* Docs: add a note about rackspace API keys
+* Remove out of date comment
+* Stop special-casing idenity catalog lookups
+* Add designateclient to constructors list
+* OVH supports qcow2
+* Use interface not endpoint\_type for keystoneclient
+* Add support for bailing on invalid service versions
+* modify test-requirement according to requirements project
+* [Fix gate]Update test requirement
+* Pass ironic microversion through from api\_version
+* Add ability to skip yaml loading
+* Remove the keystoneclient auth fallback
+* Add support for overriding mistral service type
+* Add helper scripts to print version discovery info
+* Add support for indicating required floating IPs
+* Update reno for stable/ocata
+* fix location of team tags in README
+* Fix typo for baremetal\_service\_type
+
 1.26.0
 ------
 
-* Revert "Fix interface_key for identity clients"
+* Revert "Fix interface\_key for identity clients"
 * Add support for Murano
 
 1.25.0
@@ -14,27 +38,27 @@ CHANGES
 * Remove 3.4 from tox envlist
 * Use upper-constraints for tox envs
 * Update swift constructor to be Session aware
-* Magnum's service_type is container_infra
+* Magnum's service\_type is container\_infra
 * Add docutils contraint on 0.13.1 to fix building
-* Fix interface_key for identity clients
+* Fix interface\_key for identity clients
 * Show team and repo badges on README
 
 1.24.0
 ------
 
-* Revert "Remove validate_auth_ksc"
+* Revert "Remove validate\_auth\_ksc"
 
 1.23.0
 ------
 
-* Remove validate_auth_ksc
+* Remove validate\_auth\_ksc
 * Add fuga.io to vendors
-* Support token_endpoint as an auth_type
+* Support token\_endpoint as an auth\_type
 * Add support for volumev3 service type
 * Normalize cloud config before osc-lib call
 * Fix a bunch of tests
 * Clarify how to set SSL settings
-* Update ECS image_api_version to 1
+* Update ECS image\_api\_version to 1
 
 1.22.0
 ------
@@ -42,11 +66,11 @@ CHANGES
 * Revert "Split auth plugin loading into its own method"
 * Add setter for session constructor
 * Enable release notes translation
-* cloud_config:get_session_endpoint: catch Keystone EndpointNotFound
+* cloud\_config:get\_session\_endpoint: catch Keystone EndpointNotFound
 * Using assertIsNone() instead of assertEqual(None, ...)
 * Update homepage with developer documentation page
 * List py35 in the default tox env list
-* Fix AttributeError in `get_config`
+* Fix AttributeError in \`get\_config\`
 * modify the home-page info with the developer documentation
 * Don't create envvars cloud if cloud or region are set
 * Don't build releasenotes in normal docs build
@@ -57,7 +81,7 @@ CHANGES
 1.21.1
 ------
 
-* Go ahead and handle YAML list in region_name
+* Go ahead and handle YAML list in region\_name
 
 1.21.0
 ------
@@ -81,7 +105,7 @@ CHANGES
 ------
 
 * Add test for precedence rules
-* Pass the argparse data into to validate_auth
+* Pass the argparse data into to validate\_auth
 * Revert "Fix precedence for pass-in options"
 
 1.19.0
@@ -93,16 +117,16 @@ CHANGES
 * Update citycloud to list new regions
 * Add support for listing a cloud as shut down
 * Add support for deprecating cloud profiles
-* Refactor fix magic in get_one_cloud()
+* Refactor fix magic in get\_one\_cloud()
 
 1.18.0
 ------
 
 * Reword the entries in the README a bit
 * Add shade constructor helper method
-* Rename session_client to make_rest_client
+* Rename session\_client to make\_rest\_client
 * Add helper method for OpenStack SDK constructor
-* Add missing "cloud" argument to _validate_auth_ksc
+* Add missing "cloud" argument to \_validate\_auth\_ksc
 * Workaround bad required params in troveclient
 * Trivial: Remove 'MANIFEST.in'
 * Trivial: remove openstack/common from flake8 exclude list
@@ -125,7 +149,7 @@ CHANGES
 ------
 
 * Update the README a bit
-* Allow session_client to take the same args as make_client
+* Allow session\_client to take the same args as make\_client
 * Fix formulation
 
 1.15.0
@@ -138,7 +162,7 @@ CHANGES
 * Add support for zetta.io
 * Stop ignoring v2password plugin
 * Go ahead and remove final excludes
-* Don't set project_domain if not project scoped
+* Don't set project\_domain if not project scoped
 * Clean up removed hacking rule from [flake8] ignore lists
 * set up release notes build
 
@@ -148,13 +172,13 @@ CHANGES
 * Fix a precedence problem with auth arguments
 * Return empty dict instead of None for lack of file
 * Pass version arg by name not position
-* Use _get_client in make_client helper function
+* Use \_get\_client in make\_client helper function
 * Add barbicanclient support
 * Remove openstack-common.conf
 * Add IBM Public Cloud
-* Replace assertEqual(None, *) with assertIsNone in tests
+* Replace assertEqual(None, \*) with assertIsNone in tests
 * Update auth urls and identity API versions
-* Stop hardcoding compute in simple_client
+* Stop hardcoding compute in simple\_client
 * Update volume API default version from v1 to v2
 * Debug log a deferred keystone exception, else we mask some useful diag
 * Fix README.rst, add a check for it to fit PyPI rules
@@ -165,21 +189,21 @@ CHANGES
 1.13.1
 ------
 
-* Munge region_name to '' if set to None
+* Munge region\_name to '' if set to None
 * Fix some README typos
-* Fix token_endpoint usage
+* Fix token\_endpoint usage
 * remove python 2.6 os-client-config classifier
 * If cloud doesn't list regions expand passed name
 
 1.13.0
 ------
 
-* Fix glance endpoints with endpoint_override
-* Allow passing in explicit version for legacy_client
+* Fix glance endpoints with endpoint\_override
+* Allow passing in explicit version for legacy\_client
 * Pass endpoint override to constructors
-* Support backwards compat for _ args
+* Support backwards compat for \_ args
 * Add backwards compat mapping for auth-token
-* Replace assertEqual(None, *) with assertIsNone in tests
+* Replace assertEqual(None, \*) with assertIsNone in tests
 * Allow arbitrary client-specific options
 * Add ceilometer constructor to known constructors
 * Add support for generalized per-region settings
@@ -217,7 +241,7 @@ CHANGES
 ------
 
 * Workaround a dispute between osc and neutronclient
-* Workaround for int value with verbose_level
+* Workaround for int value with verbose\_level
 * Remove unneeded workaround for ksc
 * Add default API version for magnum service
 
@@ -232,7 +256,7 @@ CHANGES
 ------
 
 * Convert floats to string
-* Don't assume pass_version_arg=False for network
+* Don't assume pass\_version\_arg=False for network
 * Update network api version in defaults.json
 * Dont turn bools into strings
 * Use requestsexceptions for urllib squelching
@@ -243,12 +267,12 @@ CHANGES
 * Update conoha's vendor profile to include SJC
 * Use json for in-tree cloud data
 * Update auro to indicate move to neutron
-* Copy values in backwards_interface differently
+* Copy values in backwards\_interface differently
 * Fix typo in Catalyst region configs
 * Aligned a few words in the docs
 * Sort vendor list
 * Add conoha public cloud
-* Allow for templated variables in auth_url
+* Allow for templated variables in auth\_url
 * Use assertDictEqual to test dict equality
 * Always pull regions from vendor profiles
 
@@ -275,9 +299,9 @@ CHANGES
 
 * Fix two typos
 * Put in override for Rackspace broken neutron
-* Support passing force_ipv4 to the constructor
+* Support passing force\_ipv4 to the constructor
 * identity version is 2.0
-* Handle OS_CLOUD and OS_REGION_NAME friendly-like
+* Handle OS\_CLOUD and OS\_REGION\_NAME friendly-like
 * Added SWITCHengines vendor file
 * update RST for readme so pypi looks pretty
 
@@ -286,7 +310,7 @@ CHANGES
 
 * Fix a little error with the None auth type
 * Add support for Catalyst as vendor
-* Change ignore-errors to ignore_errors
+* Change ignore-errors to ignore\_errors
 
 1.7.4
 -----
@@ -307,8 +331,8 @@ CHANGES
 1.7.1
 -----
 
-* Convert auth kwargs '-' to '_'
-* Properly handle os- prefixed args in fix_args
+* Convert auth kwargs '-' to '\_'
+* Properly handle os- prefixed args in fix\_args
 * Test kwargs passing not just argparse
 
 1.7.0
@@ -328,26 +352,26 @@ CHANGES
 * Add Enter Cloud Suite to vendors list
 * Add elastx to vendor support matrix
 * Switch the image default to v2
-* Update auro auth_url and region information
+* Update auro auth\_url and region information
 * Add citycloud to the vendors list
 * Return keystoneauth plugins based on auth args
 * Remove duplicate lines that are the same as default
 * Add default version number for heat
 * Update OVH public cloud information
 * Handle empty defaults.yaml file
-* Do not treat project_name and project_id the same
-* Revert "Revert "Use the correct auth_plugin for token authentication""
+* Do not treat project\_name and project\_id the same
+* Revert "Revert "Use the correct auth\_plugin for token authentication""
 
 1.6.3
 -----
 
-* Revert "Use the correct auth_plugin for token authentication"
+* Revert "Use the correct auth\_plugin for token authentication"
 
 1.6.2
 -----
 
 * Ignore infra CI env vars
-* Use the correct auth_plugin for token authentication
+* Use the correct auth\_plugin for token authentication
 
 1.6.1
 -----
@@ -365,16 +389,16 @@ CHANGES
 
 * Remove requirements.txt from tox.ini
 * Remove py26 and py33 from tox.ini
-* Rename 'endpoint_type' to 'interface'
+* Rename 'endpoint\_type' to 'interface'
 * Have service name default to None
 * Remove region list from single cloud
-* Fix set_default() when used before config init
+* Fix set\_default() when used before config init
 * Specify the config file with environment variable
 * Add support for configuring region lists with yaml
 * Fix rendering issue in Readme
 * Clean up vendor data
 * Add support for indicating preference for IPv6
-* Normalize project_name aliases
+* Normalize project\_name aliases
 
 1.4.0
 -----
@@ -405,8 +429,8 @@ CHANGES
 1.2.0
 -----
 
-* Add set_one_cloud method
-* Add tests for get_cloud_names
+* Add set\_one\_cloud method
+* Add tests for get\_cloud\_names
 * Add flag to indicate handling of security groups
 * Don't normalize too deeply
 
@@ -417,7 +441,7 @@ CHANGES
 * Add inequality method
 * Add an equality method for CloudConfig
 * Capture the filename used for config
-* Normalize all keys down to _ instead of -
+* Normalize all keys down to \_ instead of -
 * Expose method for getting a list of cloud names
 * Rename cloud to profile
 * Don't pass None as the cloud name
@@ -438,7 +462,7 @@ CHANGES
 -----
 
 * Add flag to indicate where floating ips come from
-* get_one_cloud should use auth merge
+* get\_one\_cloud should use auth merge
 * Also accept .yml as a suffix
 * Remove crufty lines from README
 * Update vendor support to reflect v2 non-task
@@ -454,7 +478,7 @@ CHANGES
 * Document vendor support information
 * Reset cache default to 0
 * add .venv to gitignore
-* Move region_names out of auth dict
+* Move region\_names out of auth dict
 * Add runabove to vendors
 * Add image information to vexxhost account
 * Add vexxhost
@@ -475,9 +499,9 @@ CHANGES
 -----
 
 * Flesh out api version defaults
-* Handle project_name/tenant_name in the auth dict
+* Handle project\_name/tenant\_name in the auth dict
 * Add two newlines to the ends of files
-* Rename auth_plugin to auth_type
+* Rename auth\_plugin to auth\_type
 
 0.5.0
 -----
@@ -493,7 +517,7 @@ CHANGES
 -----
 
 * Prefer dest value when option is depricated
-* Allow region_name to be None
+* Allow region\_name to be None
 
 0.4.2
 -----
@@ -505,17 +529,17 @@ CHANGES
 -----
 
 * Remove runtime depend on pbr
-* Provide Rackspace service_name override
+* Provide Rackspace service\_name override
 
 0.4.0
 -----
 
 * Start keeping default versions for all services
 * Support keystone auth plugins in a generic way
-* Replace defaults_dict with scanning env vars
+* Replace defaults\_dict with scanning env vars
 * Workflow documentation is now in infra-manual
 * Corrections to readme
-* Use yaml.safe_load instead of load
+* Use yaml.safe\_load instead of load
 * Throw error if a non-existent cloud is requested
 
 0.3.0
@@ -525,11 +549,11 @@ CHANGES
 * Map CloudConfig attributes to CloudConfig.config
 * Add support for argparse Namespace objects
 * Add support for command line argument processing
-* Handle lack of username for project_name defaults
+* Handle lack of username for project\_name defaults
 * Handle the project/tenant nonesense more cleanly
 * Add cache control settings
 * Handle no vendor clouds config files
-* Remove unused class method get_services
+* Remove unused class method get\_services
 * Add clouds-public.yaml
 * Prep for move to stackforge
 
