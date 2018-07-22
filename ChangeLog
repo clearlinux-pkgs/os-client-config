@@ -1,6 +1,96 @@
 CHANGES
 =======
 
+1.31.2
+------
+
+* fix tox python3 overrides
+* Remove app\_name config tests
+* Add release note for the vendor data regression
+* fix saltstack breakage introduced in v1.31.0
+* Remove service-type override tests
+* Fix F405 additional strictness
+
+1.31.1
+------
+
+* Add cache methods back to OpenSackConfig
+* fix link to openstacksdk in deprecation block
+
+1.31.0
+------
+
+* Replace guts with openstack.config
+
+1.30.0
+------
+
+* Remove DataCentred from list of vendors
+* add lower-constraints job
+* Add Limestone Networks vendor info
+* Rename python-openstacksdk to openstacksdk
+* pypy is not checked at gate
+* Add image\_format for VEXXHOST profile
+* Updated from global requirements
+* Use 'none' auth plugin
+* Updated from global requirements
+* Add os-client-config tips jobs
+* Updated from global requirements
+* Add osc tips jobs back
+* Add missing auth url from betacloud to docs
+* Update reno for stable/queens
+* Updated from global requirements
+
+1.29.0
+------
+
+* Updated from global requirements
+* Split docs requirements and update tox.ini
+* Zuul: Remove project name
+* Add betacloud to the vendors
+* Make the get\_service\_type() overrides tolernat of no defaults
+* Remove osc devstack tips jobs
+* Do not apply format expansions to passwords
+* Updated from global requirements
+* Remove setting of version/release from releasenotes
+* Add shade-functional-tips jobs
+* Consume the osc-functional-devstack-tips job
+* Fix doc typo
+* Added nat\_source flag for networks
+* Add shade-tox-tips jobs
+* Update make\_rest\_client to work with version discovery
+* Protect against p\_opt not having prompt attribute
+* Treat clouds.yaml with one cloud like envvars
+* Updated from global requirements
+* Fix requires\_floating\_ip
+* Updates for stestr
+* Updated from global requirements
+* Updated from global requirements
+* Updated from global requirements
+* Updated from global requirements
+* DataCentred supports Keystone V3 and Glance V2
+* Update globals safely
+* Update the documentation link for doc migration
+* Remove OSIC
+* Update reno for stable/pike
+* Updated from global requirements
+* Manually sync with g-r
+
+1.28.0
+------
+
+* use openstackdocstheme html context
+* switch from oslosphinx to openstackdocstheme
+* turn on warning-is-error in documentation build
+* rearrange existing documentation to follow the new standard layout
+* Don't pop from os.environ
+* Keep a singleton to support multiple get\_config calls
+* Revert "Revert "Use interface not endpoint\_type for keystoneclient""
+* Revert "Use interface not endpoint\_type for keystoneclient"
+* Add ironicclient to constructors list
+* Add helper method to fetch service catalog
+* Fix interactions with keystoneauth from newton
+
 1.27.0
 ------
 
