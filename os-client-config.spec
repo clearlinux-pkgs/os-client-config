@@ -6,25 +6,23 @@
 #
 Name     : os-client-config
 Version  : 1.31.2
-Release  : 42
+Release  : 43
 URL      : http://tarballs.openstack.org/os-client-config/os-client-config-1.31.2.tar.gz
 Source0  : http://tarballs.openstack.org/os-client-config/os-client-config-1.31.2.tar.gz
 Source99 : http://tarballs.openstack.org/os-client-config/os-client-config-1.31.2.tar.gz.asc
 Summary  : OpenStack Client Configuation Library
 Group    : Development/Tools
 License  : Apache-2.0
-Requires: os-client-config-python3
-Requires: os-client-config-license
-Requires: os-client-config-python
+Requires: os-client-config-license = %{version}-%{release}
+Requires: os-client-config-python = %{version}-%{release}
+Requires: os-client-config-python3 = %{version}-%{release}
 Requires: Sphinx
 Requires: docutils
+Requires: openstackdocstheme
 Requires: openstacksdk
 Requires: reno
 BuildRequires : buildreq-distutils3
 BuildRequires : pbr
-BuildRequires : pip
-BuildRequires : python3-dev
-BuildRequires : setuptools
 
 %description
 os-client-config
@@ -41,7 +39,7 @@ license components for the os-client-config package.
 %package python
 Summary: python components for the os-client-config package.
 Group: Default
-Requires: os-client-config-python3
+Requires: os-client-config-python3 = %{version}-%{release}
 
 %description python
 python components for the os-client-config package.
@@ -64,14 +62,14 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1532270655
-python3 setup.py build -b py3
+export SOURCE_DATE_EPOCH=1541270150
+python3 setup.py build
 
 %install
 rm -rf %{buildroot}
-mkdir -p %{buildroot}/usr/share/doc/os-client-config
-cp LICENSE %{buildroot}/usr/share/doc/os-client-config/LICENSE
-python3 -tt setup.py build -b py3 install --root=%{buildroot}
+mkdir -p %{buildroot}/usr/share/package-licenses/os-client-config
+cp LICENSE %{buildroot}/usr/share/package-licenses/os-client-config/LICENSE
+python3 -tt setup.py build  install --root=%{buildroot}
 echo ----[ mark ]----
 cat %{buildroot}/usr/lib/python3*/site-packages/*/requires.txt || :
 echo ----[ mark ]----
@@ -80,8 +78,8 @@ echo ----[ mark ]----
 %defattr(-,root,root,-)
 
 %files license
-%defattr(-,root,root,-)
-/usr/share/doc/os-client-config/LICENSE
+%defattr(0644,root,root,0755)
+/usr/share/package-licenses/os-client-config/LICENSE
 
 %files python
 %defattr(-,root,root,-)
