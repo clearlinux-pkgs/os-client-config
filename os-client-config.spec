@@ -6,7 +6,7 @@
 #
 Name     : os-client-config
 Version  : 1.31.2
-Release  : 43
+Release  : 44
 URL      : http://tarballs.openstack.org/os-client-config/os-client-config-1.31.2.tar.gz
 Source0  : http://tarballs.openstack.org/os-client-config/os-client-config-1.31.2.tar.gz
 Source99 : http://tarballs.openstack.org/os-client-config/os-client-config-1.31.2.tar.gz.asc
@@ -16,17 +16,16 @@ License  : Apache-2.0
 Requires: os-client-config-license = %{version}-%{release}
 Requires: os-client-config-python = %{version}-%{release}
 Requires: os-client-config-python3 = %{version}-%{release}
-Requires: Sphinx
-Requires: docutils
-Requires: openstackdocstheme
 Requires: openstacksdk
-Requires: reno
 BuildRequires : buildreq-distutils3
 BuildRequires : pbr
 
 %description
+================
 os-client-config
-        ================
+================
+.. image:: http://governance.openstack.org/badges/os-client-config.svg
+:target: http://governance.openstack.org/reference/tags/index.html
 
 %package license
 Summary: license components for the os-client-config package.
@@ -62,7 +61,8 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1541270150
+export SOURCE_DATE_EPOCH=1551029655
+export MAKEFLAGS=%{?_smp_mflags}
 python3 setup.py build
 
 %install
