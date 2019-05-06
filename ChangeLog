@@ -1,6 +1,28 @@
 CHANGES
 =======
 
+1.32.0
+------
+
+* Applying the HTTPS protocal in configuration.rst
+* Use template for lower-constraints
+* Change openstack-dev to openstack-discuss
+* Update min tox version to 2.0
+* Fix the conflict of urlparse between python2 and python3
+* Remove setup.py check from pep8 job
+* Change python3.5 job to python3.7 job on Stein+
+* fix bug link in readme
+* fix bug link in readme
+* add lib-forward-testing-python3 test job
+* add python 3.6 unit test job
+* switch documentation job to new PTI
+* import zuul job settings from project-config
+* Update reno for stable/rocky
+* Invalid link of doc reference
+* Add release note link in README
+* Shift Limestone Networks profile to openstacksdk
+* Update links in README
+
 1.31.2
 ------
 
