@@ -1,6 +1,16 @@
 CHANGES
 =======
 
+1.33.0
+------
+
+* Fix broken link to openstacksdk
+* Add Python 3 Train unit tests
+* Update for opendev
+* OpenDev Migration Patch
+* Update master for stable/stein
+* Update hacking version
+
 1.32.0
 ------
 
