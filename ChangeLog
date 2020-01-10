@@ -1,6 +1,15 @@
 CHANGES
 =======
 
+2.0.0
+-----
+
+* Add a release note for Python 2 support removal
+* Fix pep8 issue in o\_c\_c/\_\_init\_\_
+* Stop testing python2.7
+* Update the constraints url
+* Update master for stable/train
+
 1.33.0
 ------
 
