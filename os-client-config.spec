@@ -6,7 +6,7 @@
 #
 Name     : os-client-config
 Version  : 2.0.0
-Release  : 51
+Release  : 52
 URL      : http://tarballs.openstack.org/os-client-config/os-client-config-2.0.0.tar.gz
 Source0  : http://tarballs.openstack.org/os-client-config/os-client-config-2.0.0.tar.gz
 Source1  : http://tarballs.openstack.org/os-client-config/os-client-config-2.0.0.tar.gz.asc
@@ -25,8 +25,36 @@ BuildRequires : pbr
 ================
 os-client-config
 ================
+
 .. image:: https://governance.openstack.org/tc/badges/os-client-config.svg
-:target: https://governance.openstack.org/tc/reference/tags/index.html
+    :target: https://governance.openstack.org/tc/reference/tags/index.html
+
+.. warning::
+  `os-client-config` has been superceded by `openstacksdk`_. While
+  `os-client-config` will continue to exist, it is highly recommended that
+  users transition to using `openstacksdk`_ directly.
+
+`os-client-config` is a library for collecting client configuration for
+using an OpenStack cloud in a consistent and comprehensive manner. It
+will find cloud config for as few as 1 cloud and as many as you want to
+put in a config file. It will read environment variables and config files,
+and it also contains some vendor specific default values so that you don't
+have to know extra info to use OpenStack
+
+* If you have a config file, you will get the clouds listed in it
+* If you have environment variables, you will get a cloud named `envvars`
+* If you have neither, you will get a cloud named `defaults` with base defaults
+
+Source
+------
+
+* Free software: Apache license
+* Documentation: http://docs.openstack.org/os-client-config/latest
+* Source: http://opendev.org/openstack/os-client-config
+* Bugs: https://storyboard.openstack.org/#!/project/openstack/os-client-config
+* Release Notes https://docs.openstack.org/releasenotes/os-client-config
+
+.. _openstacksdk: http://docs.openstack.org/openstacksdk/latest
 
 %package license
 Summary: license components for the os-client-config package.
@@ -49,6 +77,7 @@ python components for the os-client-config package.
 Summary: python3 components for the os-client-config package.
 Group: Default
 Requires: python3-core
+Provides: pypi(os-client-config)
 
 %description python3
 python3 components for the os-client-config package.
@@ -63,7 +92,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1578689294
+export SOURCE_DATE_EPOCH=1583193510
 # -Werror is for werrorists
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
