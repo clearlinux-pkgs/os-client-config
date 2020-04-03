@@ -1,6 +1,12 @@
 CHANGES
 =======
 
+2.1.0
+-----
+
+* Use unittest.mock instead of third party mock
+* Uncap jsonschema
+
 2.0.0
 -----
 

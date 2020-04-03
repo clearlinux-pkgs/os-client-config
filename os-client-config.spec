@@ -5,11 +5,11 @@
 # Source0 file verified with key 0x4F398DEAE440091C (infra-root@openstack.org)
 #
 Name     : os-client-config
-Version  : 2.0.0
-Release  : 53
-URL      : http://tarballs.openstack.org/os-client-config/os-client-config-2.0.0.tar.gz
-Source0  : http://tarballs.openstack.org/os-client-config/os-client-config-2.0.0.tar.gz
-Source1  : http://tarballs.openstack.org/os-client-config/os-client-config-2.0.0.tar.gz.asc
+Version  : 2.1.0
+Release  : 54
+URL      : http://tarballs.openstack.org/os-client-config/os-client-config-2.1.0.tar.gz
+Source0  : http://tarballs.openstack.org/os-client-config/os-client-config-2.1.0.tar.gz
+Source1  : http://tarballs.openstack.org/os-client-config/os-client-config-2.1.0.tar.gz.asc
 Summary  : OpenStack Client Configuation Library
 Group    : Development/Tools
 License  : Apache-2.0
@@ -22,8 +22,11 @@ BuildRequires : openstacksdk
 BuildRequires : pbr
 
 %description
+================
 os-client-config
-        ================
+================
+.. image:: https://governance.openstack.org/tc/badges/os-client-config.svg
+:target: https://governance.openstack.org/tc/reference/tags/index.html
 
 %package license
 Summary: license components for the os-client-config package.
@@ -54,15 +57,16 @@ python3 components for the os-client-config package.
 
 
 %prep
-%setup -q -n os-client-config-2.0.0
-cd %{_builddir}/os-client-config-2.0.0
+%setup -q -n os-client-config-2.1.0
+cd %{_builddir}/os-client-config-2.1.0
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1583525286
+export SOURCE_DATE_EPOCH=1585932864
+# -Werror is for werrorists
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -78,7 +82,7 @@ python3 setup.py build
 export MAKEFLAGS=%{?_smp_mflags}
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/os-client-config
-cp %{_builddir}/os-client-config-2.0.0/LICENSE %{buildroot}/usr/share/package-licenses/os-client-config/57aed0b0f74e63f6b85cce11bce29ba1710b422b
+cp %{_builddir}/os-client-config-2.1.0/LICENSE %{buildroot}/usr/share/package-licenses/os-client-config/57aed0b0f74e63f6b85cce11bce29ba1710b422b
 python3 -tt setup.py build  install --root=%{buildroot}
 echo ----[ mark ]----
 cat %{buildroot}/usr/lib/python3*/site-packages/*/requires.txt || :
