@@ -6,7 +6,7 @@
 #
 Name     : os-client-config
 Version  : 2.1.0
-Release  : 54
+Release  : 55
 URL      : http://tarballs.openstack.org/os-client-config/os-client-config-2.1.0.tar.gz
 Source0  : http://tarballs.openstack.org/os-client-config/os-client-config-2.1.0.tar.gz
 Source1  : http://tarballs.openstack.org/os-client-config/os-client-config-2.1.0.tar.gz.asc
